@@ -1,3 +1,5 @@
+# Main block for all problems
+
 data = []
 
 100.times do |i|
@@ -8,16 +10,38 @@ end
 
 data.reverse!
 
+# Solution to numbers 1 and 2
+
 # puts "=================="
-# puts "user_#{user_number}'s tweets"
+# puts "user_#2's tweets"
 # puts "=================="
-# puts "tweet: #{data[user_number][:tweets][0]}"
-# puts "tweet: #{data[user_number][:tweets][1]}"
+# puts "tweet: #{data[2][:tweets][0]}"
+# puts "tweet: #{data[2][:tweets][1]}"
 
-puts "Please enter the user ID you'd lke to look up"
+# Solution to number 4
 
-search_id = gets.chomp.to_i
+# puts "Please enter the user ID you'd lke to look up"
 
-index_num = data.find_index {|h| h[:id] == search_id}
+# search_id = gets.chomp.to_i
 
-puts "user_#{search_id} is at index #{index_num} in the array"
+# index_num = data.find_index {|h| h[:id] == search_id}
+
+# puts "user_#{search_id} is at index #{index_num} in the array"
+
+# Multiline solution to number 5
+
+# puts "SEARCH RESULTS"
+# puts "username     age"
+# puts "========     ==="
+# data.each do |h|
+# 	if h[:age] < 26
+# 		puts "#{h[:username]}      #{h[:age]}"
+# 	end
+# end
+
+# Single line solution to number 5
+
+puts "SEARCH RESULTS"
+puts "username     age"
+puts "========     ==="
+data.select { |h| h[:age] <= 25}.each { |nh| puts "#{nh[:username]}      #{nh[:age]}"}
